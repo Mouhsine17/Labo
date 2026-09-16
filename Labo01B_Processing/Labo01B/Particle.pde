@@ -37,11 +37,11 @@ class Particle extends GraphicObject {
 
     velocity.add(acceleration);
 
-    velocity.limit(7);
+    velocity.limit(200);
 
     location.add(velocity);
 
-    lifespan -= 1.5;
+    lifespan -= 0.5;
 
     acceleration.mult(0);
   }
@@ -50,22 +50,12 @@ class Particle extends GraphicObject {
 
     stroke(255, lifespan);
 
-    if (variationPair) {
 
       if (affected) {
-        fill(50, 220, 80, lifespan);
+        fill(0, 255, 0, lifespan);
       } else {
-        fill(220, lifespan);
+        fill(0, 120, 255, lifespan);
       }
-
-    } else {
-
-      if (!affected) {
-        fill(60, 120, 255, lifespan);
-      } else {
-        fill(220, lifespan);
-      }
-    }
 
     ellipse(
       location.x,

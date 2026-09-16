@@ -13,16 +13,12 @@ void setup() {
   currentTime = millis();
   previousTime = millis();
 
-  player = new Player(width / 2, height - 60);
+  player = new Player(width / 2, height - 15);
 
-  particleSystem = new ParticleSystem(
-    new PVector(width / 2, height * 0.25),
-    18,
-    260,
-    variationPair
-  );
+  particleSystem = new ParticleSystem(new PVector(width / 2, height * 0.25),5 , 1000, variationPair );
 
-  particleSystem.setDistance(230, 280);
+  particleSystem.setDistance(320/2, 360/2);
+  //120 - 160
 }
 
 void draw() {
@@ -37,7 +33,7 @@ void update(int delta) {
 }
 
 void display() {
-  background(30);
+  background(255);
 
   particleSystem.display();
   player.display();

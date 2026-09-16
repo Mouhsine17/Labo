@@ -1,11 +1,11 @@
 class Player extends GraphicObject {
 
-  float diameter = 50;
+  float diameter = 30;
   float speed = 5;
 
-  float mass = 220;
+  float mass = 280;
 
-  float G = 12;
+  float G = 50;
 
   Player(float x, float y) {
     location = new PVector(x, y);
@@ -37,7 +37,7 @@ class Player extends GraphicObject {
   void display() {
     stroke(255);
     strokeWeight(2);
-    fill(255, 180, 50);
+    fill(0);
 
     ellipse(
       location.x,
