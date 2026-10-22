@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dm8iigb76cdv"]
+
+[ext_resource type="Script" uid="uid://clqdmrngn4rrf" path="res://mobile_tween.gd" id="1_m5vsw"]
+[ext_resource type="Texture2D" uid="uid://cpvia5a7lrl2g" path="res://assets/sprites/platforms.png" id="2_67017"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1vivr"]
+
+[node name="MobileTween" type="Node2D" unique_id=1768099036]
+script = ExtResource("1_m5vsw")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=705898525]
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D" unique_id=1035757326]
+texture = ExtResource("2_67017")
+region_enabled = true
+region_rect = Rect2(16, 0, 32, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D" unique_id=1698984141]
+shape = SubResource("RectangleShape2D_1vivr")
+one_way_collision = true
